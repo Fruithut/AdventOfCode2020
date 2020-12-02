@@ -4,19 +4,24 @@ using System.Linq;
 
 const int total = 2020;
 
-var allLines = File.ReadAllLines("./input.txt").Select(int.Parse).ToList();
-var numberDictionary = allLines.ToDictionary(value => value, value => true);
+var inputValues = File.ReadAllLines("./input.txt").Select(int.Parse).ToList();
 
-var resultingMultiplication = 0;
-foreach (var inputValue in allLines)
-{
-    var differenceMissing = total - inputValue;
-    
-    if (numberDictionary.ContainsKey(differenceMissing))
-    {
-        resultingMultiplication = inputValue * differenceMissing;
-        break;
-    }
-}
+var numberDictionary = inputValues.ToDictionary(value => value, value => true);
 
-Console.WriteLine($"Result part one: {resultingMultiplication}");
+var resultPartOne = 
+    (from inputValue in inputValues
+        let differenceMissing = total - inputValue 
+        where numberDictionary.ContainsKey(differenceMissing) 
+        select inputValue * differenceMissing)
+    .FirstOrDefault();
+
+var resultPartTwo =
+    (from a in inputValues
+        from b in inputValues
+        from c in inputValues
+        where a + b + c == total
+        select a * b * c)
+    .FirstOrDefault();
+
+Console.WriteLine($"Result part one: {resultPartOne}");
+Console.WriteLine($"Result part two: {resultPartTwo}");
