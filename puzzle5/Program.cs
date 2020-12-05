@@ -35,19 +35,15 @@ static void SolveUsingDivisionApproach(IEnumerable<string> seats)
 
 static void SolveUsingBinaryApproach(IEnumerable<string> seats)
 {
-    var seatIdsAlt = seats.Select(x =>
-    {
-        var binary = GetBinaryRepresentation(x);
-        var row = Convert.ToInt32(binary.Substring(0, 7), 2);
-        var col = Convert.ToInt32(binary.Substring(7, 3), 2);
-        return row * 8 + col;
-    }).OrderBy(x => x).ToList();
+    var seatIds = seats.Select(seatString => Convert.ToInt32(GetBinaryRepresentation(seatString), 2))
+        .OrderBy(x => x)
+        .ToList();
 
-    var smallestId = seatIdsAlt.First();
-    var largestId = seatIdsAlt.Last();
+    var smallestId = seatIds.First();
+    var largestId = seatIds.Last();
 
     // Assumes 1 missing number
-    var missingId = Enumerable.Range(smallestId, largestId).Except(seatIdsAlt).First();
+    var missingId = Enumerable.Range(smallestId, largestId).Except(seatIds).First();
 
     Console.WriteLine($"Result part one alternative: {largestId}");
     Console.WriteLine($"Result part two alternative: {missingId}");
