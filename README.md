@@ -9,3 +9,4 @@ Solutions to [Advent Of Code 2020](https://adventofcode.com/2020)
 |[3: Toboggan Trajectory](https://adventofcode.com/2020/day/3)|[1+2](/puzzle3/Program.cs)|C#
 |[4: Passport Processing](https://adventofcode.com/2020/day/4)|[1+2](/puzzle4/Program.cs)|C#
 |[5: Binary Boarding](https://adventofcode.com/2020/day/5)|[1+2](/puzzle5/Program.cs)|C#
+|[6: Custom Customs](https://adventofcode.com/2020/day/6)|[1+2](/puzzle6/Program.cs)|C#
