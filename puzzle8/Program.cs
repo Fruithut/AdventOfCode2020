@@ -39,12 +39,15 @@ namespace puzzle8
                 var alteredProgram = instructions.ToArray();
                 var (operation, value) = instructions[i];
 
-                alteredProgram[i] = operation switch
+                switch (operation)
                 {
-                    "nop" => new Instruction("jmp", value),
-                    "jmp" => new Instruction("nop", value),
-                    _ => instructions[i]
-                };
+                    case "nop": alteredProgram[i] = new Instruction("jmp", value);
+                        break;
+                    case "jmp": alteredProgram[i] = new Instruction("nop", value);
+                        break;
+                    default:
+                        continue;
+                }
 
                 if (ExecuteProgram(alteredProgram, out var accumulator))
                 {
