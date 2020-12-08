@@ -36,7 +36,7 @@ namespace puzzle7
 
         private static int CountTotalBagsInsideBag(string bagName, IReadOnlyDictionary<string, IEnumerable<BagSpecification>> bagToContentMap)
         {
-            return 1 + bagToContentMap[bagName].Sum(bagSpec => bagSpec.Count * CountTotalBagsInsideBag(bagSpec.Name, bagToContentMap));;
+            return 1 + bagToContentMap[bagName].Sum(bagSpec => bagSpec.Count * CountTotalBagsInsideBag(bagSpec.Name, bagToContentMap));
         }
 
         private static int CountBagsLeadingToShinyGoldBags(IReadOnlyDictionary<string, IEnumerable<BagSpecification>> bagToContentMap)
