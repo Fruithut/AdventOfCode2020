@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-
 var numbers = File.ReadLines("./input.txt").Select(long.Parse).ToArray();
-
 var invalidNumber = FindFirstInvalidNumber(numbers, 25);
 var sequentialNumbers = FindSequentialNumbersForNumber(numbers, invalidNumber).ToList();
 
