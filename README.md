@@ -15,3 +15,4 @@ Solutions to [Advent Of Code 2020](https://adventofcode.com/2020)
 |[9: Encoding Error](https://adventofcode.com/2020/day/9)|[1+2](/puzzle9/Program.cs)|C#
 |[10: Adapter Array](https://adventofcode.com/2020/day/10)|[1+2](/puzzle10/Program.cs)|C#
 |[11: Seating System](https://adventofcode.com/2020/day/11)|[1+2](/puzzle11/Program.cs)|C#
+|[12: Rain Risk](https://adventofcode.com/2020/day/12)|[1+2](/puzzle12/Program.cs)|C#
