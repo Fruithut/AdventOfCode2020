@@ -14,3 +14,4 @@ Solutions to [Advent Of Code 2020](https://adventofcode.com/2020)
 |[8: Handheld Halting](https://adventofcode.com/2020/day/8)|[1+2](/puzzle8/Program.cs)|C#
 |[9: Encoding Error](https://adventofcode.com/2020/day/9)|[1+2](/puzzle9/Program.cs)|C#
 |[10: Adapter Array](https://adventofcode.com/2020/day/10)|[1+2](/puzzle10/Program.cs)|C#
+|[11: Seating System](https://adventofcode.com/2020/day/11)|[1+2](/puzzle11/Program.cs)|C#
